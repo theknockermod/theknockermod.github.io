@@ -348,16 +348,17 @@
   }
 
   function keepProjectTabsLocal() {
-    const tabs = { Description: "#description", Gallery: "#gallery", Changelog: "#changelog", Versions: "#versions" };
     document.querySelectorAll("nav a").forEach((link) => {
       const label = normalize(link.textContent);
-      if (!tabs[label]) return;
-      link.href = location.pathname + tabs[label];
-      link.addEventListener("click", (event) => {
-        event.preventDefault();
-        history.replaceState(null, "", tabs[label]);
-        if (label === "Versions") document.querySelector("#offline-download-button")?.click();
-      });
+      if (label === "Description") link.href = location.pathname + "#description";
+      if (label === "Gallery") link.href = "https://modrinth.com/mod/the-knocker/gallery";
+      if (label === "Changelog") link.href = "https://modrinth.com/mod/the-knocker/changelog";
+      if (label === "Versions") {
+        link.removeAttribute("href");
+        link.setAttribute("aria-disabled", "true");
+        link.style.pointerEvents = "none";
+        link.style.opacity = ".55";
+      }
     });
   }
 
