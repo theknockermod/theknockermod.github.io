@@ -1,0 +1,1 @@
+import{aY as o,bg as i,bh as s}from"./DQWdeSuy.js";const c=(t,r)=>{r({title:"An error occurred",text:t?.data?.description||t.message||t||"Unknown error",type:"error"})},l=(t,r=c,d)=>{const{addNotification:n}=o();return async(...e)=>{i();try{return await t(...e)}catch(a){r?await r(a,n):console.error("[CLIENT TRY ERROR]",a)}finally{s()}}};export{l as u};

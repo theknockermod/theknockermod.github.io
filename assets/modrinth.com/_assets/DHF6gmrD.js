@@ -1,0 +1,1 @@
+import{j4 as u,j5 as r,be as o,eT as f,at as l}from"./DQWdeSuy.js";const n=u(async s=>{let e,t;const a=([e,t]=r(()=>o(null,s)),e=await e,t(),e);if(!a.value.user||!f(a.value.user))throw l({fatal:!0,statusCode:401,statusMessage:"Unauthorized"})});export{n as default};

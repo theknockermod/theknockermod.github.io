@@ -1,0 +1,1 @@
+import{V as e,o as n,a as c}from"./DQWdeSuy.js";const o={},a={class:"min-w-1.5 min-h-1.5 max-h-1.5 max-w-1.5 mx-0.5 rounded-full bg-surface-5 inline-block my-auto align-middle"};function r(s,t){return n(),c("div",a)}const l=e(o,[["render",r]]);export{l as B};

@@ -1,0 +1,2 @@
+const t=`- Features that interact with the user's machine [outside of the context of the game](%DISCLOSURES_FAQ_EXTERNAL_LINK%).
+`;export{t as default};

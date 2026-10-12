@@ -1,0 +1,2 @@
+const e=`- 1.9: Content giving a false impression of endorsement by Modrinth or any other person or entity
+`;export{e as default};

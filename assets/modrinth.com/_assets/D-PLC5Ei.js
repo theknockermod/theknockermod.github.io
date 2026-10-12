@@ -1,0 +1,1 @@
+import{V as s,o as t,a,ae as o}from"./DQWdeSuy.js";const r={},c={class:"flex flex-wrap items-center gap-2"};function n(e,l){return t(),a("div",c,[o(e.$slots,"default")])}const f=s(r,[["render",n]]);export{f as P};

@@ -1,0 +1,1 @@
+import"./DQWdeSuy.js";import{U as s}from"./CykAW2yW.js";const i=720*60*60*1e3;function r(a,t=Date.now()){const e=a?.campaigns?.pride_26;if(!e?.has_midas||!e.last_donated_at)return!1;const n=Date.parse(e.last_donated_at);return Number.isFinite(n)?n+i>t:!1}function _(a,t=Date.now()){return!!((a?.badges??0)&s.MIDAS)||r(a,t)}export{_ as h};

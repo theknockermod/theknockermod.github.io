@@ -1,0 +1,1 @@
+{"id":"a61e94f2-88cd-4624-b4b9-917b782ee534","timestamp":1791719194927,"matcher":{"static":{"/dashboard/revenue/withdraw":{"redirect":"/dashboard/revenue"}},"wildcard":{"/email":{"redirect":"/_internal/templates/email/**"}},"dynamic":{}},"prerendered":[]}

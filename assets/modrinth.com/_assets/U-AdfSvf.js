@@ -1,0 +1,1 @@
+function n(r){return Array.isArray(r)?r[0]??"":r??""}function t(r){return Array.isArray(r)?r[0]??null:r??null}function i(r){return r==null?[]:Array.isArray(r)?r.map(String):[String(r)]}export{t as a,i as b,n as q};

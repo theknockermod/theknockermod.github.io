@@ -1,0 +1,2 @@
+const e=`The current Discord invite is invalid, likely because your invite has expired. Make sure to set your invite link to permanent with unlimited uses before resubmitting your project.
+`;export{e as default};

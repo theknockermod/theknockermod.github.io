@@ -1,0 +1,1 @@
+import{e as s}from"./DNeUPOTB.js";import{d as r,u as n,c as p,j as c}from"./DQWdeSuy.js";const _=r({__name:"FormattedTag",props:{tag:{},enforceType:{}},setup(t){const{formatMessage:a}=n(),e=t,o=p(()=>s(a,e.tag,e.enforceType));return(m,f)=>c(o.value)}});export{_};

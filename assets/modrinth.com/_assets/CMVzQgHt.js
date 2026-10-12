@@ -1,0 +1,2 @@
+const s=`    - [AI-generated or assisted assets](%DISCLOSURES_FAQ_AI_ASSETS_LINK%), such as textures, audio, or other design elements.
+`;export{s as default};

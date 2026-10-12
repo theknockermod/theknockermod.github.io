@@ -1,0 +1,2 @@
+const l=`- 1.5: Promotion of illegal activity, or advocacy of unlawful acts including real-life drugs or illicit substances
+`;export{l as default};

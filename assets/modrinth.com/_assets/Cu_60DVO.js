@@ -1,0 +1,2 @@
+const e=`Please note that per section 6.1 of [Modrinth's Content Rules](https://modrinth.com/legal/rules), you will be required to apply the "Contains AI Generated Content" disclosure in your disclosure settings if you wish to include this file in your Modpack.
+`;export{e as default};

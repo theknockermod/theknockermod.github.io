@@ -1,0 +1,1 @@
+import{d as c,c as t,o as n,m as r,J as s,p,ci as g,cj as m,ck as u}from"./DQWdeSuy.js";const f=c({__name:"TagIcon",props:{tag:{},enforceType:{}},setup(a){const e=a,o=t(()=>e.enforceType==="loader"?g(e.tag):e.enforceType==="category"?m(e.tag):u(e.tag));return(y,_)=>o.value?(n(),r(s(o.value),{key:0})):p("",!0)}});export{f as _};

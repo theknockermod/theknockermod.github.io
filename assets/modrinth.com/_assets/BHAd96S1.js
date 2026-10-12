@@ -1,0 +1,1 @@
+import{ca as r,c as s,cb as n}from"./DQWdeSuy.js";const o=()=>s(()=>n??[]),l=()=>{const t=o();return s(()=>t.value.map(e=>{let a=e.nameShort;return e.alpha2==="TW"?a="Taiwan":e.nameShort.length>30&&(a=`${e.nameShort} (${e.alpha2})`),{value:e.alpha2,label:a}}))},i=r;export{l as a,o as b,i as u};

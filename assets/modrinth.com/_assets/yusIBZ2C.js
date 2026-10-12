@@ -1,0 +1,1 @@
+import{bn as s,be as t}from"./DQWdeSuy.js";const i=async a=>{await s(`team/${a}/join`,{apiVersion:3,method:"POST"})},n=async a=>{const e=await t();await m(a,e.value.user.id)},m=async(a,e)=>{await s(`team/${a}/members/${e}`,{apiVersion:3,method:"DELETE"})};export{i as a,m as b,n as r};
