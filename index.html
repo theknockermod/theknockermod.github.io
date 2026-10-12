@@ -62,7 +62,7 @@
   <div class="legal">Not an official Minecraft mod. Not approved by or associated with Mojang or Microsoft.</div>
   <footer><span>THE KNOCKER // ANONYMOUS RELEASE</span><span>Independent Minecraft community project</span></footer>
   <script>
-    const downloadTarget = "downloads/the-knocker-fabric-1.20.4.jar";
+    const downloadTarget = "downloads/theknocker_1_20_4_latest.jar";
     const downloadButton = document.querySelector('#direct-download');
     const downloadCard = document.querySelector('.download-card');
     const eyes = document.querySelectorAll('.eye');
@@ -74,7 +74,7 @@
       downloadButton.dataset.default = 'Download';
       downloadButton.dataset.hover = 'Are you ready?';
       downloadButton.removeAttribute('aria-disabled');
-      downloadButton.setAttribute('download', 'the-knocker-fabric-1.20.4.jar');
+      downloadButton.setAttribute('download', 'theknocker_1_20_4_latest.jar');
     }).catch(() => {});
     downloadCard.addEventListener('pointermove', (event) => {
       eyes.forEach((eye) => {

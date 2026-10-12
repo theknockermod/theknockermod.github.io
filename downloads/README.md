@@ -2,6 +2,6 @@
 
 Upload the release file to this folder with the exact name:
 
-`the-knocker-fabric-1.20.4.jar`
+`theknocker_1_20_4_latest.jar`
 
 The website's Download button is already connected to that path.
