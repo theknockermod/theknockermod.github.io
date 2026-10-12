@@ -126,6 +126,7 @@
   text-decoration: none;
 }
 .offline-modrinth-mark { width: 20px; height: 20px; flex: none; }
+.offline-install-app[aria-disabled="true"] { opacity: .55; pointer-events: none; cursor: not-allowed; }
 .offline-manual-divider { display: flex; align-items: center; gap: 12px; margin: 20px 0 14px; color: #555b65; font-size: 14px; }
 .offline-manual-divider::before, .offline-manual-divider::after { content: ""; height: 1px; flex: 1; background: #e2e2e5; }
 .offline-select-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }

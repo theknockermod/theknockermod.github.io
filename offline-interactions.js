@@ -184,7 +184,8 @@
     const updateModal = () => {
       modal.querySelector("[data-project-icon]").src = config.projectIcon;
       modal.querySelector("[data-download-title]").textContent = config.downloadDialogTitle;
-      modal.querySelector("[data-install-app]").href = config.modrinthAppUrl;
+      modal.querySelector("[data-install-app]").removeAttribute("href");
+      modal.querySelector("[data-install-app]").setAttribute("aria-disabled", "true");
       modal.querySelector("[data-version-title]").textContent = config.versionTitle;
       modal.querySelector("[data-version-channel]").textContent = config.releaseChannel;
       modal.querySelector("[data-release-age]").textContent = config.releaseAge;
