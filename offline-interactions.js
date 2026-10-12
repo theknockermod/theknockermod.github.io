@@ -348,16 +348,34 @@
   }
 
   function keepProjectTabsLocal() {
-    document.querySelectorAll("nav a").forEach((link) => {
+    const links = [...document.querySelectorAll("nav a")].filter((link) => ["Description", "Gallery", "Changelog", "Versions"].includes(normalize(link.textContent)));
+    const nav = links[0]?.closest("nav");
+    const content = nav?.parentElement?.parentElement?.querySelector(":scope > section.normal-page__content");
+    const description = content?.innerHTML || "";
+    const show = (label) => {
+      if (!content) return;
+      if (label === "Description") content.innerHTML = description;
+      if (label === "Gallery") content.innerHTML = `<div class="card"><img src="https://cdn.modrinth.com/data/hTju2zcV/images/fc0128c68f683409c0aae888ca7e0c30401ceccd_350.webp" alt="Banner" style="display:block;width:100%;border-radius:12px"><h2 style="margin:16px 0 4px">Banner</h2><p style="margin:0;color:var(--color-secondary)">April 10, 2024</p></div>`;
+      if (label === "Changelog") content.innerHTML = `<div class="card" style="padding:32px;text-align:center"><h2 style="margin:0 0 8px">Changelog</h2><p style="margin:0;color:var(--color-secondary)">No changelog entries have been published.</p></div>`;
+      links.forEach((item) => {
+        const active = normalize(item.textContent) === label;
+        item.toggleAttribute("aria-current", active);
+        item.classList.toggle("bg-button-bgSelected", active);
+        item.querySelector(".tab-color")?.classList.toggle("text-button-textSelected", active);
+        item.querySelector(".tab-color")?.classList.toggle("text-contrast", !active);
+      });
+      history.replaceState(null, "", `#${label.toLowerCase()}`);
+    };
+    links.forEach((link) => {
       const label = normalize(link.textContent);
-      if (label === "Description") link.href = location.pathname + "#description";
-      if (label === "Gallery") link.href = "https://modrinth.com/mod/the-knocker/gallery";
-      if (label === "Changelog") link.href = "https://modrinth.com/mod/the-knocker/changelog";
       if (label === "Versions") {
         link.removeAttribute("href");
         link.setAttribute("aria-disabled", "true");
         link.style.pointerEvents = "none";
         link.style.opacity = ".55";
+      } else {
+        link.href = `#${label.toLowerCase()}`;
+        link.addEventListener("click", (event) => { event.preventDefault(); show(label); });
       }
     });
   }
