@@ -347,9 +347,38 @@
     });
   }
 
+  function keepProjectTabsLocal() {
+    const tabs = { Description: "#description", Gallery: "#gallery", Changelog: "#changelog", Versions: "#versions" };
+    document.querySelectorAll("nav a").forEach((link) => {
+      const label = normalize(link.textContent);
+      if (!tabs[label]) return;
+      link.href = location.pathname + tabs[label];
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        history.replaceState(null, "", tabs[label]);
+        if (label === "Versions") document.querySelector("#offline-download-button")?.click();
+      });
+    });
+  }
+
+  function limitCompatibility() {
+    const heading = [...document.querySelectorAll("h2")].find((el) => normalize(el.textContent) === "Compatibility");
+    const card = heading?.parentElement;
+    if (!card) return;
+    const gameSection = [...card.querySelectorAll("section")].find((el) => normalize(el.querySelector("h3")?.textContent) === "Minecraft: Java Edition");
+    const versions = gameSection?.querySelectorAll(":scope > div > div");
+    versions?.forEach((chip, index) => index === 0 ? chip.textContent = "1.20.4" : chip.remove());
+    const platformSection = [...card.querySelectorAll("section")].find((el) => normalize(el.querySelector("h3")?.textContent) === "Platforms");
+    platformSection?.querySelectorAll("button").forEach((button) => {
+      if (normalize(button.textContent) !== "Fabric") button.remove();
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", () => {
     repairLinks();
     setupDownload();
+    keepProjectTabsLocal();
+    limitCompatibility();
     setupEditor();
     setupDiscoverMenu();
     loadGithubRelease();
