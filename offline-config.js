@@ -2,7 +2,7 @@
 // Dosyayı kaydettikten sonra index.html sayfasını yenile.
 window.OFFLINE_PAGE_CONFIG = {
   downloadButtonLabel: "Download",
-  downloadFileUrl: "",
+  downloadFileUrl: "mod/theknocker_1_20_4_latest.jar",
   // Herkese açık GitHub deponu "kullanici/depo" biçiminde yaz.
   // En son GitHub Release içindeki Fabric .jar dosyası otomatik seçilir.
   githubRepo: "",
@@ -13,8 +13,8 @@ window.OFFLINE_PAGE_CONFIG = {
   gameVersion: "1.20.4",
   loader: "Fabric",
   releaseChannel: "Release",
-  fileName: "the-knocker-1.20.4.jar",
-  fileSize: "1.55 MiB",
+  fileName: "theknocker_1_20_4_latest.jar",
+  fileSize: "150.18 KiB",
   releaseAge: "just now",
   showEditorButton: true
 };
